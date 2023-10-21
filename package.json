@@ -5,13 +5,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server/index.js",
-    "build": "webpack"
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
