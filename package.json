@@ -5,14 +5,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server/index.js",
-    "build-prod": "webpack --config webpack.prod.js",
-    "build-dev": "webpack --config webpack.dev.js"
+    "build-prod": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.prod.js",
+    "build-dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.dev.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
@@ -21,6 +22,7 @@
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
     "babel-loader": "^8.0.6",
-    "html-webpack-plugin": "^3.2.0"
+    "html-webpack-plugin": "^3.2.0",
+    "webpack-dev-server": "^4.15.1"
   }
 }
